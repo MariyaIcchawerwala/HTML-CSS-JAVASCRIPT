@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box1{
+            background-color: beige;
+        }
+        #box2{
+            /* element gets hidden when we use visibility-hidden but leaves space but if i want to remove space too then set display:none and visibility:hidden */
+            display: none;
+            visibility: hidden;
+            background-color: aliceblue;
+        }
+        /* z-index is used when element or box is overlapping on each other and we want to decide that which box will come on which box 
+        z index only works with positioned element(absolute relative sticky fixed) */
+        #box3{
+            position: relative;
+            top: 34px;
+            background-color: bisque;
+            /* here z index is greater than box4 z index so it will come up */
+            z-index: 30;
+        }
+        #box4{
+            position: relative;
+            /* its z index is less than box3 z index so box3 will come up */
+            z-index: 25;
+            bottom: 30px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

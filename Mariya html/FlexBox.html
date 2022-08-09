@@ -1,0 +1,69 @@
+<!--
+    * Flex box is a 1-D layout method for laying out items in rows or colums 
+    * it is better way to align items into a container
+    * flexbox = fexible(which can be changed easily) + box
+    * we have two things in this i)Flex container
+                                 ii)Flex items(inside flex container it can be as many as you want)
+    *to make a flex container we have to set its display:flex;
+    main-axis:horizontal   cross-axis:vertical(of flex container)  main-start main-end cros-start cross-end
+    main size=horizontal cross size=verticle(in a flex box)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+            height: 600px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex; /*to make container flexbox by making parent a flex we made all the div inside it as flex items*/
+
+            /* Flex properties for flex container */
+
+            flex-direction: column; /*Flex items inside box will be arranged in coloum */
+            flex-direction: row-reverse;/* will be in row but on opposite direction  first box will be on right*/
+            flex-direction:column-reverse;/* order of boxes will be reversed that is first box will be on last and in coloum */
+            flex-direction: row; /*flex items will arrange itself in row also it is default value */
+
+            /* through this flex items gets wrap when we decrease the size and comes to next line */
+            flex-wrap: wrap-reverse;
+            flex-wrap: wrap; /*by default its no wrap */
+            flex-flow: row wrap;/* we can write both direction and wrap in one */
+             justify-content: center; /*Flexbox will be aligned at center*/
+             justify-content: space-between;/* equal space between flex items */
+             justify-content: space-evenly;/*it will give even space at starting and ending includin between the items */
+             justify-content: space-around;/*each box will get equal spce on both side */
+             align-items: center;/*aligns items at vertically center */
+             align-items: flex-end;/* aligns items at downwards */
+             align-items: flex-start;/*aligns items at top which is by default */
+             align-items: stretch;/* eevnly spaces in vertical which will remain same */
+    
+        }
+        .item{
+            background-color: bisque;
+            border: 2px solid brown;
+            margin: 8px;
+            padding: 5px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a Flex Box tutorial</h1>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth box</div>
+        <div class="item" id="item6">sixth box</div>
+    </div>
+    
+</body>
+</html>
