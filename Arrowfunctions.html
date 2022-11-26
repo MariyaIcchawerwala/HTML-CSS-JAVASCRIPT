@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrowFuntions</title>
+</head>
+<body>
+    <div class="container">Arrow funtion tutorial</div>
+    <script>
+       let greet=()=>{
+            console.log("hey");
+        }
+        // function greet(){
+        //     console.log("hey");
+        // }
+        greet();
+        setTimeout(() => {
+            console.log("inside set time out");
+        }, 3000);
+
+        let sum = (a,b) => a+b;
+        let half = a => a/2;
+
+        let obj1={
+            greeting:"good morning",
+            names:['mariya','rohan','harry'],
+            speak(){
+                this.names.forEach((student)=>{
+                        console.log(this.greeting +" kukdoo koo "+student);//here this.greeting denotes to outside function's object's greeting due to arrow funtion instead of this if i have used a function it will not identify this.greeting
+                });
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+</html>

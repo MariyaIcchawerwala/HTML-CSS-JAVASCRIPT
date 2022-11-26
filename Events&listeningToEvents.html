@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #btn{
+            padding: 10px 15px;
+            background-color : rgb(255, 217, 170);
+            border: 2px solid black;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- event is like a action like subscribing and you can listn to that event -->
+    <!-- browser events:
+    click
+    context menu:when you right click on mouse then event is fire i.e. event ocuured
+    mouseover/mouseout
+    mousedown(clicking on mouse)/mouseup
+    mouse move
+    submit
+    focus
+    domcontent loaded
+    transition event -->
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius necessitatibus qui sint, ut atque voluptate non iste accusamus distinctio est quod nam recusandae quaerat soluta natus dolore, laudantium provident fugit unde illo? Animi quis eos harum, dolores vel, necessitatibus quasi sint velit temporibus corporis assumenda, magnam deserunt alias dolor quidem quod minus veritatis soluta ullam expedita tenetur sunt error! Ad soluta repellat, rerum praesentium ab quod nam est veniam accusamus deserunt fuga vitae necessitatibus. Enim libero voluptatum minus porro reiciendis culpa illo veniam, ullam consequuntur eaque officiis quisquam? Minus explicabo magni beatae magnam voluptatem, omnis eveniet, esse hic iure alias architecto maiores eligendi rem facere dolorum quae? Ullam mollitia beatae totam. Voluptas ad eos placeat quibusdam quo dolores libero, quos nihil ipsam rerum velit ullam facere ducimus impedit saepe accusamus veritatis quae est aperiam at sunt ipsa recusandae sed ea? Animi mollitia vel officia dolorum tenetur natus, quaerat nobis maxime hic aliquid accusamus beatae? Quasi deleniti culpa excepturi molestias amet odit deserunt eligendi dolorum, delectus velit aliquid natus quas laboriosam quaerat illo ipsum? Voluptatum voluptatem eaque atque asperiores rerum incidunt illum veritatis placeat excepturi in at voluptate dolore, repellendus adipisci nostrum repellat unde quasi debitis reprehenderit laudantium. Laborum mollitia voluptate similique accusantium culpa earum rem tenetur officiis natus, soluta architecto consequuntur molestias nesciunt, amet iusto sed illum? Iure repudiandae libero rerum similique eaque qui sed! Expedita asperiores provident minima quibusdam, adipisci ipsam amet.</p>
+    </div>
+    <button id="btn" onclick="togglehide()">Show/hide</button>
+
+    <script>
+        // listening to mouseover
+        let para=document.getElementById("para")
+        para.addEventListener('mouseover',function run(){
+            alert("mouse inside a paragraph");
+        })
+        // listening to mouseout
+        para.addEventListener('mouseout',function run(){
+             console.log("mouse went outside");
+        })
+
+        // listning to onclick
+        function togglehide(){
+            // let btn=document.getElementById('btn');
+            let para=document.getElementById('para');
+            if(para.style.display!='none')
+            {
+                para.style.display='none';
+            }
+            else{
+                para.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>

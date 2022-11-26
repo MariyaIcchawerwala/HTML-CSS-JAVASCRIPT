@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive page </title>
+</head>
+<body>
+    <div class="container">
+        This is a page
+    </div>
+
+    <script>
+        // Alert() in in-browser java script = it is a function where we put a message stream that pops up on our page in a modale window content of the page will not be visible till you deal with that message and this function returns nothing
+         alert('this is a message'); //when you want to give any info to user ex:reminder for expiry of subscription
+
+        // promt()
+        let name=prompt('What is your name','guest') //first argument is your message and second argument is you default argument as sonn as i will enter the name and press ok that value will be returned in name variable
+        console.log(name);
+
+        // confirm() you use it for example when user is deleting a file and you want to give wanrning to use that are you confirm you want to do this 
+        let deletePost=confirm('do you really want to delete this post?');
+         //if we press ok than confirm() will return true and if i cancel than it will return false
+         if(deletePost)
+         {
+            console.log("your post has been deleted");
+         }
+         else{
+            console.log("your post is not deleted");
+         }
+
+          let age=prompt("What is your age?","age");
+          if(age<18)
+          {
+            alert("Sorry your are not elligible for the club");
+          }
+          else{
+            alert("successfully regestered for the club");
+          }
+
+
+        
+    </script>
+</body>
+</html>

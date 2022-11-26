@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and conditionals</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+            <li>item7</li>
+        </ul>
+    </div>
+    <script>
+        // if i use var then i can redeclare same variable but if i use let you cannot redeclare a variable
+        var string = 'this is a string';
+        console.log(string);
+        let a = 'my'; //it is global
+        // let a='my'; this will show error if you use let you cannot redeclare a variable
+        {
+            // but i can declare it inside a block
+            let a = 'hey'; //scope only inside this block
+            console.log(a);
+        }
+        const b = 'this cannot be changed'; //you cannot change constant variable
+        console.log(b);
+
+        let age = 14;
+        if (age > 18) {
+            console.log("you are eligible");
+        }
+        else {
+            console.log("not elligible");
+        }
+        const cup = 45
+        switch (cup) {
+            case 42:
+                console.log("value is 42");
+                break;
+            case 43:
+                console.log("value is 43");
+                break;
+            case 45:
+                console.log("value is 45");
+                break;
+
+            default:
+                console.log("value is none");
+                break;
+        }
+    </script>
+</body>
+
+</html>

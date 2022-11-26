@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Tutorial</title>
+</head>
+<body>
+    <!-- Jason Stands for java sccript object notation to store or transport data when you want to transfer object or data over  networking -->
+    <div class="container">This is my container</div>
+    <script>
+        let jsonObj={
+            name:"harry",
+            channel:"CWH",
+            food:"bhindi"
+        }
+        console.log(jsonObj);
+        // many times we have complicated object so we use jason
+        myjasonstr=JSON.stringify(jsonObj); // converts object to string
+        console.log(myjasonstr);
+
+       myjasonstr= myjasonstr.replace("harry","larry")
+       console.log(myjasonstr)
+    //    to convert string to object again
+        newjasonObj=JSON.parse(myjasonstr)//takes valis jason string
+        console.log(newjasonObj)
+    </script>
+</body>
+</html>

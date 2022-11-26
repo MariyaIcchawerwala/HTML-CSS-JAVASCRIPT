@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <div class="container">
+        This is about loops
+    </div>
+    <script>
+        let i=0;
+        for(i=0;i<5;i++)
+        {
+            console.log(i);
+        }
+        let friends=['deepa','ajay','rohan']
+        // for (let i = 0; i < friends.length; i++) {
+            // console.log(friends[i]);
+            
+        // }
+          
+        // for each loop
+        friends.forEach(function f(element){
+             console.log(element);
+        })
+        
+        // for of loop
+        for(elements of friends)
+        {
+            console.log("hey"+elements);
+        }
+   
+        // for in loop
+        let employee={
+            name:'Mariya',
+            salary:720000000,
+            lastName:'Unique Opticals'
+        }
+        for(key in employee){
+            console.log(`the ${key} of employee is ${employee[key]}`);
+        }
+    </script>
+</body>
+</html>

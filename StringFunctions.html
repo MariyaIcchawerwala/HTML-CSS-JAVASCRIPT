@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string Funtions</title>
+</head>
+<body>
+   <script>
+    var str='this is a string';
+    console.log(str);
+    //when you want to print first occurence of any substring
+    var position= str.indexOf('is');
+    console.log(`position of "is" in" ${str}" is ${position}`);
+
+    //when you want to print last occurence of any substring
+    var pos= str.lastIndexOf('is');
+    console.log(`position of "is" in" ${str}" is ${pos}`);
+
+    // when you want substring from a string by giving first and last index
+    var substr= str.slice(1,6); //can take negative values
+    console.log(substr);
+    // another method to get substring
+    var sub=str.substring(1,6); //cannot take negative values
+    console.log(sub);
+
+    // when i want to replace anything in a string
+    var replaced= str.replace('string','Mariya');
+    console.log(str);
+    console.log(replaced);
+
+    // for converting into uppercase
+    console.log(str.toUpperCase());
+
+    // for convertig to lowercase
+    console.log(str.toLowerCase());
+
+    // concat
+    var con=str.concat(' new string');
+    console.log(con);
+
+    // trim
+    var white='    heyy     ';
+    console.log(white.trim());
+
+    // how to extract particular character
+    var char =str.charAt(2);
+    console.log(char);
+   </script> 
+</body>
+</html>

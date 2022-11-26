@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and setTimeOut</title>
+</head>
+<body>
+    <div class="container">Time now is <span id="time"></span></div>
+    
+    <script>
+        // when i want to run a function at an particular interval
+        // SetTimeOut=allows us to run the function once after the interval
+        // ClearTimeOut=allows us to run the function repeatedly after the interval
+        function greet(name,text){
+            console.log("hello goodmorning " +name+" "+text);
+        }
+       timeout= setTimeout(greet,5000,'Mariya','take care'); //it will run once after 5 second,only function name has to be given no parenthesis needed
+       console.log(timeout); //this will give us an unique id of setitmemode and i can clear it by using this id
+       clearTimeout(timeout); //when you want to clear your function
+
+       intervalid=setInterval(greet,2000,'mariya','takecare'); //print multiple time this too returns an id
+
+    //    displaying time after every 2 sec
+       clearInterval(intervalid); 
+
+       function displaytime(){
+        time=new Date();
+        console.log(time);
+        document.getElementById('time').innerHTML=time;
+       }
+       setInterval(displaytime,2000)
+
+        
+    </script>
+</body>
+</html>

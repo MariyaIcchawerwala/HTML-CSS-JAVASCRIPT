@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating the dom</title>
+</head>
+<body>
+    <!-- whatever you have written in your body tag -->
+    <div id="main" class="container">
+        <ul id="ul">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Services</li>
+            <li>More</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another container
+    </div>
+    <script>
+        // getting elements by id
+        let main=document.getElementById('main')
+        console.log(main);
+        let ul=document.getElementById('ul'); // when you want to change html inside element id ul
+        console.log(ul);
+        
+        // getting elements by class
+        let container=document.getElementsByClassName('container');
+        console.log(container); // also you can use it like arrays like container[0] container[1]
+
+        let del=document.querySelector('.container'); //selecting by css selectors it will return first class of container it founds 
+        console.log("selecting by selectors ",del);
+
+        let sel=document.querySelector('#ul>li'); //returns all the elements that are matched
+        sel[0].innerHTML="inserted" //inerting inserted on first li
+        </script>
+</body>
+</html>

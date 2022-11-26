@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date &Time</title>
+</head>
+<body>
+    <div class="container">This Is a container
+        current time is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is date and time tutorial")
+        let now=new Date();
+        console.log(now);
+
+        let now1=new Date(0); //it will give you the reference value of date 
+        console.log(now1);
+
+        let now2=new Date(1000) // it will give you time increasing 1 second of reference time
+
+        // to initialize your own date
+        let newdate= new Date("2023-12-4");
+        console.log(newdate);
+
+        // second method to initial
+        // let newdate1=new Date(year,monnth,date,hours,minutes,seconds,miliseconds)
+        let newDate1=new Date(2023,2,14,3,2,34);
+        console.log(newDate1);
+        
+        let yr=newDate1.getFullYear(); //it will return year
+        console.log(yr);
+        let dt=newdate.getDate();
+        console.log(dt);
+        let mt=newDate1.getMonth();
+        console.log(mt);
+        newDate1.setDate(5); //newDate1 will change to 5
+        console.log(newDate1);
+        // we also have setminute setSecond setHour
+        
+
+
+        setInterval(updatetime,1000);
+        function updatetime(){
+            time.innnerHtml=new Date();
+        }
+    </script>
+</body>
+</html>
